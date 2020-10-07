@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class gameController : MonoBehaviour
 {
@@ -26,6 +27,11 @@ public class gameController : MonoBehaviour
             panels[0].SetActive(false);
             panels[1].SetActive(true);
         }
+    }
+
+    public void IniciarJogo()
+    {
+        SceneManager.LoadScene("Fase_1");
     }
 
     public void Sair()
