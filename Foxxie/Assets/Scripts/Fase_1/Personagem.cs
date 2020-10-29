@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Personagem : MonoBehaviour
 {
     public float speed;
-    public int jumpForce;
+    public float jumpForce;
     public LayerMask GroundLayer, trocaDimensao, layerJump;
     public GameController gc;
     public bool isDash;
@@ -42,6 +42,7 @@ public class Personagem : MonoBehaviour
         Jump();
         TrocaDimensao();
         Dash();
+        ValidaPlatMove();
     }
 
     private void Move()
@@ -203,4 +204,27 @@ public class Personagem : MonoBehaviour
         
         return rayC.collider != null ? true : false;
     }
+    private void ValidaPlatMove()
+    {
+        RaycastHit2D rayC = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size, 0f, Vector2.down, .1f, layerJump);
+        
+        if(rayC.collider != null && rayC.collider.tag == "Plat_move")
+        {
+            transform.SetParent(rayC.transform);
+        }
+        else
+        {
+            transform.SetParent(null);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.tag == "DeathZone")
+        {
+            rb2D.velocity = Vector2.zero;
+            transform.position = gc.GetComponent<GameController>().initialPos.position;
+        }
+    }
+
 }

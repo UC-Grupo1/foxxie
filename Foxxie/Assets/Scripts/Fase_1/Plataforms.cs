@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Plataforms : MonoBehaviour
 {
-    private PlatformEffector2D effector;
     public float waitTime;
+    private PlatformEffector2D effector;
 
     private void Start()
     {
@@ -14,14 +14,19 @@ public class Plataforms : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.S))
+        Efeito();
+    }
+
+    private void Efeito()
+    {
+        if (Input.GetKeyUp(KeyCode.S))
         {
             waitTime = 0.01f;
         }
 
-        if(Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
-            if(waitTime <= 0)
+            if (waitTime <= 0)
             {
                 effector.rotationalOffset = 180f;
                 waitTime = 0.01f;
@@ -32,7 +37,7 @@ public class Plataforms : MonoBehaviour
             }
         }
 
-        if(Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
             effector.rotationalOffset = 0;
         }

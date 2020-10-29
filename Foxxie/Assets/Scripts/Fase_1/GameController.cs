@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     public Image cooldownDash, cooldownDim;
     public Material grayScale;
     public Animator animatorTrocaDim;
+    public Transform initialPos;
 
     bool inMenu;
 

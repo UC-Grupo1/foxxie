@@ -9,6 +9,10 @@ TagManager:
   - Resolucao
   - Volume
   - Ground
+  - DeathZone
+  - Plat_pos_ini
+  - Plat_pos_final
+  - Plat_move
   layers:
   - Default
   - TransparentFX
