@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempo: 2
+  realTempoRespawn: 5
 --- !u!95 &7732171281210311070
 Animator:
   serializedVersion: 3

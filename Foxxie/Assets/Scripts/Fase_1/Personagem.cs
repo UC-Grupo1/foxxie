@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Personagem : MonoBehaviour
 {
@@ -222,8 +223,29 @@ public class Personagem : MonoBehaviour
     {
         if(col.gameObject.tag == "DeathZone")
         {
-            rb2D.velocity = Vector2.zero;
-            transform.position = gc.GetComponent<GameController>().initialPos.position;
+            //rb2D.velocity = Vector2.zero;
+            //transform.position = gc.GetComponent<GameController>().initialPos.position;
+            SceneManager.LoadScene("Fase_1");
+        }
+
+        if (col.gameObject.tag == "Moeda")
+        {
+            gc.moedas++;
+            Destroy(col.gameObject);
+        }
+
+        if (col.gameObject.tag == "Chave")
+        {
+            gc.pegouChave = true;
+            Destroy(col.gameObject);
+        }
+
+        if (col.gameObject.tag == "Portal")
+        {
+            if(gc.pegouChave)
+            {
+                SceneManager.LoadScene("Fase_2");
+            }
         }
     }
 

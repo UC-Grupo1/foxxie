@@ -12,6 +12,9 @@ public class GameController : MonoBehaviour
     public Material grayScale;
     public Animator animatorTrocaDim;
     public Transform initialPos;
+    public int moedas;
+    public Text txtMoedas;
+    public bool pegouChave;
 
     bool inMenu;
 
@@ -23,15 +26,19 @@ public class GameController : MonoBehaviour
         menu.SetActive(false);
         grayScale.SetFloat("_GrayscaleAmount", 0f);
         inMenu = false;
+        pegouChave = false;
 
         SavePreferences a = new SavePreferences();
         a.Apply();
+        moedas = 0;
+        txtMoedas.text = "0";
     }
 
     // Update is called once per frame
     void Update()
     {
         Acoes();
+        AtualizaMoedas();
     }
 
     private void Acoes()
@@ -61,5 +68,10 @@ public class GameController : MonoBehaviour
     public void BackMenuIncial()
     {
         SceneManager.LoadScene("MenuInicial");
+    }
+
+    private void AtualizaMoedas()
+    {
+        txtMoedas.text = moedas.ToString();
     }
 }
