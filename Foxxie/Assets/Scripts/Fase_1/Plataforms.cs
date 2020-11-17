@@ -9,7 +9,9 @@ public class Plataforms : MonoBehaviour
 
     private void Start()
     {
+        waitTime = 0.010f;
         effector = GetComponent<PlatformEffector2D>();
+        SetAjustes();
     }
 
     private void Update()
@@ -21,7 +23,7 @@ public class Plataforms : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.S))
         {
-            waitTime = 0.01f;
+            waitTime = 0.010f;
         }
 
         if (Input.GetKey(KeyCode.S))
@@ -29,7 +31,7 @@ public class Plataforms : MonoBehaviour
             if (waitTime <= 0)
             {
                 effector.rotationalOffset = 180f;
-                waitTime = 0.01f;
+                waitTime = 0.010f;
             }
             else
             {
@@ -40,6 +42,18 @@ public class Plataforms : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             effector.rotationalOffset = 0;
+        }
+    }
+
+    private void SetAjustes()
+    {
+        if (gameObject.transform.parent.tag == "Mundo_espiritual")
+        {
+            Material mat = Resources.Load<Material>("Material/Fase_1/grayScale");
+            gameObject.GetComponent<SpriteRenderer>().material = mat;
+            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.white;
+            gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().material = mat;
         }
     }
 }

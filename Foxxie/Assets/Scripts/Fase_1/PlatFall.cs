@@ -16,7 +16,6 @@ public class PlatFall : MonoBehaviour
         tempoDestroi = 1.5f;
         posIni = gameObject.transform.position;
         tempoRespawn = realTempoRespawn;
-        SetAjustes();
     }
 
     void Update()
@@ -60,18 +59,6 @@ public class PlatFall : MonoBehaviour
                     }
                 }
             }
-        }
-    }
-
-    private void SetAjustes()
-    {
-        if (gameObject.transform.parent.tag == "Mundo_espiritual")
-        {
-            Material mat = Resources.Load<Material>("Material/Fase_1/grayScale");
-            gameObject.GetComponent<SpriteRenderer>().material = mat;
-            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-            gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.white;
-            gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().material = mat;
         }
     }
 }

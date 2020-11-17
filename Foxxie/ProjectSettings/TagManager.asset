@@ -18,6 +18,7 @@ TagManager:
   - Mundo_espiritual
   - Chave
   - Portal
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

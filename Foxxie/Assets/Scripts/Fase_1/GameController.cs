@@ -11,12 +11,13 @@ public class GameController : MonoBehaviour
     public Image cooldownDash, cooldownDim;
     public Material grayScale;
     public Animator animatorTrocaDim;
-    public Transform initialPos;
+    public Transform initialPos, tCheckpoint;
     public int moedas;
-    public Text txtMoedas;
-    public bool pegouChave;
+    public Text txtMoedas, txtTempo;
+    public bool pegouChave, checkpoint;
 
     bool inMenu;
+    private float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,11 @@ public class GameController : MonoBehaviour
         SavePreferences a = new SavePreferences();
         a.Apply();
         moedas = 0;
-        txtMoedas.text = "0";
+        txtMoedas.text = "0 / 26";
+        txtTempo.text = "0";
+
+        timer = 0f;
+        checkpoint = false;
     }
 
     // Update is called once per frame
@@ -39,6 +44,8 @@ public class GameController : MonoBehaviour
     {
         Acoes();
         AtualizaMoedas();
+        ContaTempoFase();
+        ValidaCheckpoint();
     }
 
     private void Acoes()
@@ -72,6 +79,22 @@ public class GameController : MonoBehaviour
 
     private void AtualizaMoedas()
     {
-        txtMoedas.text = moedas.ToString();
+        txtMoedas.text = moedas.ToString() + " / 26";
     }
+
+    private void ContaTempoFase()
+    {
+        timer += Time.deltaTime;
+        txtTempo.text = timer.ToString();
+    }
+
+    private void ValidaCheckpoint()
+    {
+        if(checkpoint)
+        {
+            initialPos = tCheckpoint;
+        }
+    }
+
+
 }

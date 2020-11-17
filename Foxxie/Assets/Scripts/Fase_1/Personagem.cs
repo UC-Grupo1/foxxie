@@ -225,7 +225,8 @@ public class Personagem : MonoBehaviour
         {
             //rb2D.velocity = Vector2.zero;
             //transform.position = gc.GetComponent<GameController>().initialPos.position;
-            SceneManager.LoadScene("Fase_1");
+            rb2D.velocity = Vector2.zero;
+            transform.position = gc.initialPos.position;
         }
 
         if (col.gameObject.tag == "Moeda")
@@ -246,6 +247,12 @@ public class Personagem : MonoBehaviour
             {
                 SceneManager.LoadScene("Fase_2");
             }
+        }
+
+        if (col.gameObject.tag == "Checkpoint")
+        {
+            gc.checkpoint = true;
+            Destroy(col.gameObject);
         }
     }
 
