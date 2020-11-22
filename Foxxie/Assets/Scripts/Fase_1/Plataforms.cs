@@ -11,12 +11,12 @@ public class Plataforms : MonoBehaviour
     {
         waitTime = 0.010f;
         effector = GetComponent<PlatformEffector2D>();
-        SetAjustes();
     }
 
     private void Update()
     {
         Efeito();
+        SetAjustes();
     }
 
     private void Efeito()
@@ -47,13 +47,18 @@ public class Plataforms : MonoBehaviour
 
     private void SetAjustes()
     {
-        if (gameObject.transform.parent.tag == "Mundo_espiritual")
+        if (gameObject.transform.parent.tag == "Mundo_espiritual" || GameObject.FindWithTag("Player").GetComponent<Personagem>().isMundoE)
         {
             Material mat = Resources.Load<Material>("Material/Fase_1/grayScale");
-            gameObject.GetComponent<SpriteRenderer>().material = mat;
-            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-            gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.white;
-            gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().material = mat;
+            if(gameObject.transform.childCount > 0)
+            {
+                gameObject.transform.GetComponentInChildren<SpriteRenderer>().material = mat;
+            }
+            else
+            {
+                gameObject.GetComponent<SpriteRenderer>().material = mat;
+                gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            }
         }
     }
 }

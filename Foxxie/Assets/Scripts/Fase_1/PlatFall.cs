@@ -21,6 +21,7 @@ public class PlatFall : MonoBehaviour
     void Update()
     {
         Fall();
+        Cinza();
     }
 
     private void Fall()
@@ -55,10 +56,20 @@ public class PlatFall : MonoBehaviour
                     if(tempoRespawn <= 0)
                     {
                         GameObject plat = Instantiate(Resources.Load<GameObject>("Prefabs/Fase_1/platFall"), posIni, Quaternion.identity, gameObject.transform.parent);
+                        plat.transform.localScale = new Vector3(0.75f, 1, 1);
                         Destroy(gameObject);
                     }
                 }
             }
+        }
+    }
+
+    private void Cinza()
+    {
+        if (GameObject.FindWithTag("Player").GetComponent<Personagem>().isMundoE)
+        {
+            Material mat = Resources.Load<Material>("Material/Fase_1/grayScale");
+            gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().material = mat;
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class Personagem : MonoBehaviour
 {
@@ -11,20 +12,22 @@ public class Personagem : MonoBehaviour
     public float jumpForce;
     public LayerMask GroundLayer, trocaDimensao, layerJump;
     public GameController gc;
-    public bool isDash;
+    public bool isDash, isDeath, isMundoE;
     public AudioSource audioDim;
     public List<AudioClip> efeitos;
+    public int direction;
 
     Rigidbody2D rb2D;
     BoxCollider2D boxCollider2D;
-    bool isMundoE, isCDDash, isCDDim, onGround;
-    float tempoDim, tempoDash, dashSpeed, timeInDash;
-    int direction;
+    Animator anim;
+    bool isCDDash, isCDDim, onGround;
+    float tempoDim, tempoDash, dashSpeed, timeInDash, direct;
 
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
-        boxCollider2D = GetComponent<BoxCollider2D>();
+        boxCollider2D = gameObject.transform.GetChild(0).GetComponent<BoxCollider2D>();
+        anim = gameObject.transform.GetChild(0).GetComponent<Animator>();
         isMundoE = false;
         tempoDim = 2f;
         tempoDash = 2f;
@@ -35,35 +38,48 @@ public class Personagem : MonoBehaviour
         isCDDash = true;
         isCDDim = true;
         onGround = true;
+        isDeath = false;
     }
 
     void Update()
     {
-        Move();
-        Jump();
-        TrocaDimensao();
-        Dash();
+        AcoesPersonagem();
         ValidaPlatMove();
+        ControlaAnimacao();
+        checkPos();
+    }
+
+    private void AcoesPersonagem()
+    {
+        if(!isDeath)
+        {
+            Move();
+            Jump();
+            TrocaDimensao();
+            Dash();
+        }
     }
 
     private void Move()
     {
-        float direct = Input.GetAxisRaw("Horizontal");
+        direct = Input.GetAxisRaw("Horizontal");
         
         if (direct > 0)
         {
             direction = 1;
-            if(!ValidaCol(direction))
+            if(!ValidaCol(direction, GroundLayer))
             {
                 transform.Translate(Vector2.right * speed * Time.deltaTime, Space.World);
+                transform.eulerAngles = new Vector3(0,0,0);
             }
         }
         else if (direct < 0)
         {
             direction = 2;
-            if (!ValidaCol(direction))
+            if (!ValidaCol(direction, GroundLayer))
             {
                 transform.Translate(Vector2.left * speed * Time.deltaTime, Space.World);
+                transform.eulerAngles = new Vector3(0, 180, 0);
             }
         }
     }
@@ -86,7 +102,7 @@ public class Personagem : MonoBehaviour
             tempoDim -= Time.deltaTime;
         }
 
-        if(Input.GetKeyDown(KeyCode.Space) && isMundoE && tempoDim <= 0)
+        if(Input.GetKeyDown(KeyCode.Space) && isMundoE && tempoDim <= 0 || isDeath)
         {
             gc.mundoN.SetActive(true);
             gc.mundoE.SetActive(false);
@@ -151,16 +167,9 @@ public class Personagem : MonoBehaviour
             tempoDash -= Time.deltaTime;
         }
 
-        if (direction == 1 && (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) && tempoDash <= 0)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && tempoDash <= 0)
         {
-            rb2D.velocity = Vector2.right * dashSpeed;
-            isDash = true;
-            tempoDash = 2f;
-            isCDDash = true;
-        }
-        else if (direction == 2 && (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) && tempoDash <= 0)
-        {
-            rb2D.velocity = Vector2.left * dashSpeed;
+            rb2D.velocity = (direction == 1 ? Vector2.right : Vector2.left) * dashSpeed;
             isDash = true;
             tempoDash = 2f;
             isCDDash = true;
@@ -189,9 +198,9 @@ public class Personagem : MonoBehaviour
         }
     }
 
-    private bool ValidaCol(int dir)
+    private bool ValidaCol(int dir, LayerMask layer)
     {
-        RaycastHit2D rayC = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size, 0f, dir == 1 ? Vector2.right : Vector2.left, .1f, GroundLayer);
+        RaycastHit2D rayC = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size, 0f, dir == 1 ? Vector2.right : Vector2.left, .1f, layer);
         return rayC.collider != null ? true : false;
     }
 
@@ -219,14 +228,44 @@ public class Personagem : MonoBehaviour
         }
     }
 
+    private void ControlaAnimacao()
+    {
+        anim.SetBool("Run", direct != 0 ? true : false);
+        anim.SetBool("onGround", onGround ? true : false);
+        anim.SetInteger("inAir", (int)rb2D.velocity.y);
+        if(isDeath)
+        {
+            anim.SetBool("death", true);
+        }
+    }
+
+    public void ValidaMorteAnim()
+    {
+        anim.SetBool("death", false);
+        rb2D.velocity = Vector2.zero;
+        gameObject.transform.position = gc.initialPos.position;
+        TrocaDimensao();
+        isDeath = false;
+    }
+
+    private void checkPos()
+    {
+        if (gameObject.transform.GetChild(0).localPosition != Vector3.zero)
+        {
+            gameObject.transform.GetChild(0).localPosition = Vector3.zero;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.tag == "DeathZone")
+        if(col.gameObject.tag == "DeathZone" && !isDeath)
         {
             //rb2D.velocity = Vector2.zero;
             //transform.position = gc.GetComponent<GameController>().initialPos.position;
+            isDeath = true;
+            isDash = false;
             rb2D.velocity = Vector2.zero;
-            transform.position = gc.initialPos.position;
+            isMundoE = false;
         }
 
         if (col.gameObject.tag == "Moeda")
@@ -252,7 +291,21 @@ public class Personagem : MonoBehaviour
         if (col.gameObject.tag == "Checkpoint")
         {
             gc.checkpoint = true;
-            Destroy(col.gameObject);
+        }
+
+        if(col.gameObject.tag == "StopCam")
+        {
+            gc.cam.GetCinemachineComponent<CinemachineFramingTransposer>().m_DeadZoneHeight = 1f;
+            gc.cam.GetCinemachineComponent<CinemachineFramingTransposer>().m_DeadZoneWidth = 1f;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "StopCam")
+        {
+            gc.cam.GetCinemachineComponent<CinemachineFramingTransposer>().m_DeadZoneHeight = 0f;
+            gc.cam.GetCinemachineComponent<CinemachineFramingTransposer>().m_DeadZoneWidth = 0f;
         }
     }
 

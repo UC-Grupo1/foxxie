@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7805601432766282991}
   m_Layer: 0
   m_Name: Moeda
-  m_TagString: Untagged
+  m_TagString: Moeda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 7805601432861980324}
   - component: {fileID: 7805601432861980322}
   - component: {fileID: 7805601432861980323}
+  - component: {fileID: 5373472323804868951}
   m_Layer: 0
   m_Name: New Sprite
   m_TagString: Moeda
@@ -103,7 +104,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1ebbec27a55164e4397d0f31205a2255, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d850208ef7e94a0479a275ae9f6fe82c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,3 +131,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
+--- !u!95 &5373472323804868951
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7805601432861980325}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fa0797851b58cff44a4d0379c92b7ceb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

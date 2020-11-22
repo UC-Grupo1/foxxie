@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class GameController : MonoBehaviour
 {
 
-    public GameObject mundoN, mundoE, menu;
+    public GameObject mundoN, mundoE, menu, fogo, background;
     public Image cooldownDash, cooldownDim;
     public Material grayScale;
     public Animator animatorTrocaDim;
@@ -15,6 +16,7 @@ public class GameController : MonoBehaviour
     public int moedas;
     public Text txtMoedas, txtTempo;
     public bool pegouChave, checkpoint;
+    public CinemachineVirtualCamera cam;
 
     bool inMenu;
     private float timer;
@@ -46,6 +48,8 @@ public class GameController : MonoBehaviour
         AtualizaMoedas();
         ContaTempoFase();
         ValidaCheckpoint();
+        AcendeFogo();
+        SetaCinzaBackground();
     }
 
     private void Acoes()
@@ -85,7 +89,10 @@ public class GameController : MonoBehaviour
     private void ContaTempoFase()
     {
         timer += Time.deltaTime;
-        txtTempo.text = timer.ToString();
+        float minutes = Mathf.FloorToInt(timer / 60);
+        float seconds = Mathf.FloorToInt(timer % 60);
+
+        txtTempo.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     private void ValidaCheckpoint()
@@ -96,5 +103,37 @@ public class GameController : MonoBehaviour
         }
     }
 
+    private void AcendeFogo()
+    {
+        if(checkpoint)
+        {
+            fogo.SetActive(true);
+        }
+    }
 
+    private void SetaCinzaBackground()
+    {
+        bool mundoE = GameObject.FindWithTag("Player").GetComponent<Personagem>().isMundoE;
+        Material mat = Resources.Load<Material>("Material/Fase_1/grayScale");
+
+        for(int i = 0; i < background.transform.childCount; i++)
+        {
+            if(mundoE)
+            {
+                background.transform.GetChild(i).GetComponent<SpriteRenderer>().material = mat;
+            }
+        }
+
+        foreach(GameObject es in GameObject.FindGameObjectsWithTag("DeathZone"))
+        {
+            try
+            {
+                es.transform.GetChild(0).GetComponent<SpriteRenderer>().material = mat;
+            }
+            catch
+            {
+                continue;
+            }
+        }
+    }
 }

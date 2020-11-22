@@ -19,6 +19,8 @@ TagManager:
   - Chave
   - Portal
   - Checkpoint
+  - Echo
+  - StopCam
   layers:
   - Default
   - TransparentFX
