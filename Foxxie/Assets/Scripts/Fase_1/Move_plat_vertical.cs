@@ -43,6 +43,6 @@ public class Move_plat_vertical : MonoBehaviour
             }
         }
 
-        transform.position = Vector2.MoveTowards(transform.position, invert ? inicial.transform.position : final.transform.position, speed);
+        transform.position = Vector2.MoveTowards(transform.position, invert ? inicial.transform.position : final.transform.position, speed * Time.deltaTime);
     }
 }

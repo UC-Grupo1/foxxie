@@ -1143,6 +1143,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 12.7
       objectReference: {fileID: 0}
+    - target: {fileID: 8511192079605554849, guid: 0034fa8bb1d93eb4d8a333256ff37325, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8511192080328917328, guid: 0034fa8bb1d93eb4d8a333256ff37325, type: 3}
       propertyPath: m_LocalPosition.x
       value: 186.68
@@ -56520,18 +56524,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2046555092}
-        m_TargetAssemblyTypeName: SavePreferences, Assembly-CSharp
-        m_MethodName: Save
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2046555090}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
         m_MethodName: BackMenuIncial
@@ -103163,9 +103155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 1.5
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -103185,7 +103177,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -114373,6 +114365,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 13.8
       objectReference: {fileID: 0}
+    - target: {fileID: 8511192079605554849, guid: 0034fa8bb1d93eb4d8a333256ff37325, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8511192080328917328, guid: 0034fa8bb1d93eb4d8a333256ff37325, type: 3}
       propertyPath: m_LocalPosition.x
       value: 174.18
@@ -117818,7 +117814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8511192079605554849, guid: 0034fa8bb1d93eb4d8a333256ff37325, type: 3}
       propertyPath: speed
-      value: 0.01
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8511192079605554863, guid: 0034fa8bb1d93eb4d8a333256ff37325, type: 3}
       propertyPath: m_IsActive
