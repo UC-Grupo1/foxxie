@@ -9,6 +9,18 @@ TagManager:
   - Resolucao
   - Volume
   - Ground
+  - DeathZone
+  - Plat_pos_ini
+  - Plat_pos_final
+  - Plat_move
+  - Moeda
+  - Mundo_normal
+  - Mundo_espiritual
+  - Chave
+  - Portal
+  - Checkpoint
+  - Echo
+  - StopCam
   layers:
   - Default
   - TransparentFX

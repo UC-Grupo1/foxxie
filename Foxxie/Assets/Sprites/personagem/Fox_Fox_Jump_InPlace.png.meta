@@ -1,0 +1,718 @@
+fileFormatVersion: 2
+guid: 239bfeb157d9b514e95c45e3f07b6735
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3595184174776103987
+    second: Fox_Fox_Jump_InPlace_90Degree0
+  - first:
+      213: 109890260949232519
+    second: Fox_Fox_Jump_InPlace_90Degree1
+  - first:
+      213: 6680974606873498774
+    second: Fox_Fox_Jump_InPlace_90Degree2
+  - first:
+      213: 2565201488600789421
+    second: Fox_Fox_Jump_InPlace_90Degree3
+  - first:
+      213: 7063908057144818354
+    second: Fox_Fox_Jump_InPlace_90Degree4
+  - first:
+      213: -1105337025122691431
+    second: Fox_Fox_Jump_InPlace_90Degree5
+  - first:
+      213: -1369155179852243920
+    second: Fox_Fox_Jump_InPlace_90Degree6
+  - first:
+      213: -5744498908126688962
+    second: Fox_Fox_Jump_InPlace_90Degree7
+  - first:
+      213: -8313251445858476151
+    second: Fox_Fox_Jump_InPlace_90Degree8
+  - first:
+      213: 1018336830994433444
+    second: Fox_Fox_Jump_InPlace_90Degree9
+  - first:
+      213: -5152031697000994128
+    second: Fox_Fox_Jump_InPlace_90Degree10
+  - first:
+      213: -7641738150006297916
+    second: Fox_Fox_Jump_InPlace_90Degree11
+  - first:
+      213: 4350382166862087502
+    second: Fox_Fox_Jump_InPlace_90Degree12
+  - first:
+      213: 724265135515297824
+    second: Fox_Fox_Jump_InPlace_90Degree13
+  - first:
+      213: -7200826045721112248
+    second: Fox_Fox_Jump_InPlace_90Degree14
+  - first:
+      213: -6619263998469562051
+    second: Fox_Fox_Jump_InPlace_90Degree15
+  - first:
+      213: -3222415014814470439
+    second: Fox_Fox_Jump_InPlace_90Degree16
+  - first:
+      213: -2520797763507434023
+    second: Fox_Fox_Jump_InPlace_90Degree17
+  - first:
+      213: -4603611076238198143
+    second: Fox_Fox_Jump_InPlace_90Degree18
+  - first:
+      213: -3686812187844661720
+    second: Fox_Fox_Jump_InPlace_90Degree19
+  - first:
+      213: -5914683204392184230
+    second: Fox_Fox_Jump_InPlace_90Degree20
+  - first:
+      213: -3583009419272299435
+    second: Fox_Fox_Jump_InPlace_90Degree21
+  - first:
+      213: -793599992139242253
+    second: Fox_Fox_Jump_InPlace_90Degree22
+  - first:
+      213: -1383685655636947569
+    second: Fox_Fox_Jump_InPlace_90Degree23
+  - first:
+      213: 7256281183039697284
+    second: Fox_Fox_Jump_InPlace_90Degree24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 334b2a775f8a4e130800000000000000
+      internalID: 3595184174776103987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree1
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 3346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78b67203c98668100800000000000000
+      internalID: 109890260949232519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree2
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 3346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6949914f10797bc50800000000000000
+      internalID: 6680974606873498774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree3
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 3346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da17a51b92d699320800000000000000
+      internalID: 2565201488600789421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree4
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2baf228a3fa080260800000000000000
+      internalID: 7063908057144818354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2596
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 996997cf4dd09a0f0800000000000000
+      internalID: -1105337025122691431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree6
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 2596
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03c55863e98cffce0800000000000000
+      internalID: -1369155179852243920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree7
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 2596
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e394d70cda07740b0800000000000000
+      internalID: -5744498908126688962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree8
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 2596
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98f5a110bd561ac80800000000000000
+      internalID: -8313251445858476151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree9
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2596
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a5ce11d3fbd12e00800000000000000
+      internalID: 1018336830994433444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1846
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bae3bcd77e4088b0800000000000000
+      internalID: -5152031697000994128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree11
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1846
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cae256e3a713f590800000000000000
+      internalID: -7641738150006297916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree12
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1846
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e45420d0889af5c30800000000000000
+      internalID: 4350382166862087502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree13
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 1846
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 028e69dad4b1d0a00800000000000000
+      internalID: 724265135515297824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree14
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1846
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 841996fecd6811c90800000000000000
+      internalID: -7200826045721112248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1096
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d31a0b8b676a324a0800000000000000
+      internalID: -6619263998469562051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree16
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1096
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de291bfd9ea743d0800000000000000
+      internalID: -3222415014814470439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree17
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1096
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dd4a833ac3540dd0800000000000000
+      internalID: -2520797763507434023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree18
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 1096
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18ab4ccfd10bc10c0800000000000000
+      internalID: -4603611076238198143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree19
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1096
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e20f549dfc5dcc0800000000000000
+      internalID: -3686812187844661720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a561c3386f2daeda0800000000000000
+      internalID: -5914683204392184230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree21
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55c5561bae7964ec0800000000000000
+      internalID: -3583009419272299435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree22
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f4a9c603019cf4f0800000000000000
+      internalID: -793599992139242253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree23
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8dc4fe2a392ccce0800000000000000
+      internalID: -1383685655636947569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Jump_InPlace_90Degree24
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 481be616a4d73b460800000000000000
+      internalID: 7256281183039697284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

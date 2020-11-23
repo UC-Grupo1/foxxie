@@ -3,16 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class GameController : MonoBehaviour
 {
 
-    public GameObject mundoN, mundoE, menu;
+    public GameObject mundoN, mundoE, menu, fogo, background;
     public Image cooldownDash, cooldownDim;
     public Material grayScale;
     public Animator animatorTrocaDim;
+    public Transform initialPos, tCheckpoint;
+    public int moedas;
+    public Text txtMoedas, txtTempo;
+    public bool pegouChave, checkpoint;
+    public CinemachineVirtualCamera cam;
 
     bool inMenu;
+    private float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -22,15 +29,27 @@ public class GameController : MonoBehaviour
         menu.SetActive(false);
         grayScale.SetFloat("_GrayscaleAmount", 0f);
         inMenu = false;
+        pegouChave = false;
 
         SavePreferences a = new SavePreferences();
         a.Apply();
+        moedas = 0;
+        txtMoedas.text = "0 / 26";
+        txtTempo.text = "0";
+
+        timer = 0f;
+        checkpoint = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         Acoes();
+        AtualizaMoedas();
+        ContaTempoFase();
+        ValidaCheckpoint();
+        AcendeFogo();
+        SetaCinzaBackground();
     }
 
     private void Acoes()
@@ -60,5 +79,77 @@ public class GameController : MonoBehaviour
     public void BackMenuIncial()
     {
         SceneManager.LoadScene("MenuInicial");
+    }
+
+    private void AtualizaMoedas()
+    {
+        txtMoedas.text = moedas.ToString() + " / 26";
+    }
+
+    private void ContaTempoFase()
+    {
+        timer += Time.deltaTime;
+        float minutes = Mathf.FloorToInt(timer / 60);
+        float seconds = Mathf.FloorToInt(timer % 60);
+
+        txtTempo.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    private void ValidaCheckpoint()
+    {
+        if(checkpoint)
+        {
+            initialPos = tCheckpoint;
+        }
+    }
+
+    private void AcendeFogo()
+    {
+        if(checkpoint)
+        {
+            fogo.SetActive(true);
+        }
+    }
+
+    private void SetaCinzaBackground()
+    {
+        bool mundoE = GameObject.FindWithTag("Player").GetComponent<Personagem>().isMundoE;
+        Material mat = Resources.Load<Material>("Material/Fase_1/grayScale");
+
+        for(int i = 0; i < background.transform.childCount; i++)
+        {
+            if(mundoE)
+            {
+                if(background.transform.GetChild(i).TryGetComponent(out LightRays2D light))
+                {
+                    background.transform.GetChild(i).GetComponent<LightRays2D>().color1 = new Color32(191, 191, 191, 255);
+                    background.transform.GetChild(i).GetComponent<LightRays2D>().color2 = new Color32(71, 71, 71, 255);
+                }
+                else
+                {
+                    background.transform.GetChild(i).GetComponent<SpriteRenderer>().material = mat;
+                }
+            }
+            else
+            {
+                if (background.transform.GetChild(i).TryGetComponent(out LightRays2D light))
+                {
+                    background.transform.GetChild(i).GetComponent<LightRays2D>().color1 = new Color32(248, 255, 26, 255);
+                    background.transform.GetChild(i).GetComponent<LightRays2D>().color2 = new Color32(255, 169, 0, 255);
+                }
+            }
+        }
+
+        foreach(GameObject es in GameObject.FindGameObjectsWithTag("DeathZone"))
+        {
+            try
+            {
+                es.transform.GetChild(0).GetComponent<SpriteRenderer>().material = mat;
+            }
+            catch
+            {
+                continue;
+            }
+        }
     }
 }

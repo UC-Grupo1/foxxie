@@ -4,27 +4,34 @@ using UnityEngine;
 
 public class Plataforms : MonoBehaviour
 {
-    private PlatformEffector2D effector;
     public float waitTime;
+    private PlatformEffector2D effector;
 
     private void Start()
     {
+        waitTime = 0.010f;
         effector = GetComponent<PlatformEffector2D>();
     }
 
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.S))
+        Efeito();
+        SetAjustes();
+    }
+
+    private void Efeito()
+    {
+        if (Input.GetKeyUp(KeyCode.S))
         {
-            waitTime = 0.01f;
+            waitTime = 0.010f;
         }
 
-        if(Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
-            if(waitTime <= 0)
+            if (waitTime <= 0)
             {
                 effector.rotationalOffset = 180f;
-                waitTime = 0.01f;
+                waitTime = 0.010f;
             }
             else
             {
@@ -32,9 +39,26 @@ public class Plataforms : MonoBehaviour
             }
         }
 
-        if(Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
             effector.rotationalOffset = 0;
+        }
+    }
+
+    private void SetAjustes()
+    {
+        if (gameObject.transform.parent.tag == "Mundo_espiritual" || GameObject.FindWithTag("Player").GetComponent<Personagem>().isMundoE)
+        {
+            Material mat = Resources.Load<Material>("Material/Fase_1/grayScale");
+            if(gameObject.transform.childCount > 0)
+            {
+                gameObject.transform.GetComponentInChildren<SpriteRenderer>().material = mat;
+            }
+            else
+            {
+                gameObject.GetComponent<SpriteRenderer>().material = mat;
+                gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            }
         }
     }
 }

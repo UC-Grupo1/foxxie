@@ -1,0 +1,718 @@
+fileFormatVersion: 2
+guid: 524cf00392d97c84183b080b26c82707
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6606772678324606835
+    second: Fox_Fox_Idle01_90Degree0
+  - first:
+      213: 5938886226635005464
+    second: Fox_Fox_Idle01_90Degree1
+  - first:
+      213: -1048500523730265102
+    second: Fox_Fox_Idle01_90Degree2
+  - first:
+      213: 6531333536380428758
+    second: Fox_Fox_Idle01_90Degree3
+  - first:
+      213: -1004563658561836934
+    second: Fox_Fox_Idle01_90Degree4
+  - first:
+      213: 3942672428252643286
+    second: Fox_Fox_Idle01_90Degree5
+  - first:
+      213: 5243730864736215130
+    second: Fox_Fox_Idle01_90Degree6
+  - first:
+      213: -6779970413153767313
+    second: Fox_Fox_Idle01_90Degree7
+  - first:
+      213: -2590032606196859106
+    second: Fox_Fox_Idle01_90Degree8
+  - first:
+      213: 1735327680327160154
+    second: Fox_Fox_Idle01_90Degree9
+  - first:
+      213: -1963606988370267540
+    second: Fox_Fox_Idle01_90Degree10
+  - first:
+      213: 6457344509682960641
+    second: Fox_Fox_Idle01_90Degree11
+  - first:
+      213: 6942137991193169024
+    second: Fox_Fox_Idle01_90Degree12
+  - first:
+      213: -4547872840829401781
+    second: Fox_Fox_Idle01_90Degree13
+  - first:
+      213: 4846898868362265037
+    second: Fox_Fox_Idle01_90Degree14
+  - first:
+      213: 4509984809750841558
+    second: Fox_Fox_Idle01_90Degree15
+  - first:
+      213: -906120660219597853
+    second: Fox_Fox_Idle01_90Degree16
+  - first:
+      213: 4877216762287184576
+    second: Fox_Fox_Idle01_90Degree17
+  - first:
+      213: 4480037302119877793
+    second: Fox_Fox_Idle01_90Degree18
+  - first:
+      213: -2279739392093333505
+    second: Fox_Fox_Idle01_90Degree19
+  - first:
+      213: -8029923888477997910
+    second: Fox_Fox_Idle01_90Degree20
+  - first:
+      213: -2546138189079603996
+    second: Fox_Fox_Idle01_90Degree21
+  - first:
+      213: 1325187427851204112
+    second: Fox_Fox_Idle01_90Degree22
+  - first:
+      213: 1993223643341820298
+    second: Fox_Fox_Idle01_90Degree23
+  - first:
+      213: -7850948314081584740
+    second: Fox_Fox_Idle01_90Degree24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3775b4b2fb8ffab50800000000000000
+      internalID: 6606772678324606835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree1
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 3346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e1a0cbe892b6250800000000000000
+      internalID: 5938886226635005464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree2
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 3346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb1f30345af271f0800000000000000
+      internalID: -1048500523730265102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree3
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 3346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d12d813f35f3aa50800000000000000
+      internalID: 6531333536380428758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree4
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a78a729cca21f02f0800000000000000
+      internalID: -1004563658561836934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2596
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dfb9bf2faf27b630800000000000000
+      internalID: 3942672428252643286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree6
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 2596
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a50aa52607975c840800000000000000
+      internalID: 5243730864736215130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree7
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 2596
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f60bf40c4d4b8e1a0800000000000000
+      internalID: -6779970413153767313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree8
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 2596
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1ff4f6311b5e0cd0800000000000000
+      internalID: -2590032606196859106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree9
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2596
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a519dc2c45f151810800000000000000
+      internalID: 1735327680327160154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1846
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6237b309dddfb4e0800000000000000
+      internalID: -1963606988370267540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree11
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1846
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 109c8fb7e981d9950800000000000000
+      internalID: 6457344509682960641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree12
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1846
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08c00d2d8bd675060800000000000000
+      internalID: 6942137991193169024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree13
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 1846
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4587b63fb5b2e0c0800000000000000
+      internalID: -4547872840829401781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree14
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1846
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc1c9fe37d4a34340800000000000000
+      internalID: 4846898868362265037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1096
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d84b9f1a4fa69e30800000000000000
+      internalID: 4509984809750841558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree16
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1096
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ebe7f37f00dc63f0800000000000000
+      internalID: -906120660219597853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree17
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1096
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ca55b00eca5fa340800000000000000
+      internalID: 4877216762287184576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree18
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 1096
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1acca55a03a4c2e30800000000000000
+      internalID: 4480037302119877793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree19
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1096
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff7dfc9f91dbc50e0800000000000000
+      internalID: -2279739392093333505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa478dd84caff8090800000000000000
+      internalID: -8029923888477997910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree21
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e49ada9ecc4aacd0800000000000000
+      internalID: -2546138189079603996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree22
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01672e9c1f2046210800000000000000
+      internalID: 1325187427851204112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree23
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a819c43d75a59ab10800000000000000
+      internalID: 1993223643341820298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fox_Fox_Idle01_90Degree24
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 346
+        width: 750
+        height: 750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c99173dba14db0390800000000000000
+      internalID: -7850948314081584740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

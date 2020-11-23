@@ -11,7 +11,7 @@ public class EchoEffect : MonoBehaviour
 
     private void Start()
     {
-        player = GetComponent<Personagem>();
+        player = gameObject.transform.parent.GetComponent<Personagem>();
     }
 
     private void Update()
@@ -26,6 +26,11 @@ public class EchoEffect : MonoBehaviour
             if(timeBtwSpawns <= 0)
             {
                 GameObject gameObj = (GameObject)Instantiate(echo, transform.position, Quaternion.identity);
+                gameObj.GetComponent<SpriteRenderer>().sprite = player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
+                if(player.direction == 2)
+                {
+                    gameObj.transform.eulerAngles = new Vector3(0, 180, 0);
+                }
                 Destroy(gameObj, 4f);
                 timeBtwSpawns = startTimeBtwSpawns;
             }
@@ -34,5 +39,10 @@ public class EchoEffect : MonoBehaviour
                 timeBtwSpawns -= Time.deltaTime;
             }
         }
+    }
+
+    public void death()
+    {
+        player.ValidaMorteAnim();
     }
 }
