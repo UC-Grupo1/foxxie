@@ -120,7 +120,23 @@ public class GameController : MonoBehaviour
         {
             if(mundoE)
             {
-                background.transform.GetChild(i).GetComponent<SpriteRenderer>().material = mat;
+                if(background.transform.GetChild(i).TryGetComponent(out LightRays2D light))
+                {
+                    background.transform.GetChild(i).GetComponent<LightRays2D>().color1 = new Color32(191, 191, 191, 255);
+                    background.transform.GetChild(i).GetComponent<LightRays2D>().color2 = new Color32(71, 71, 71, 255);
+                }
+                else
+                {
+                    background.transform.GetChild(i).GetComponent<SpriteRenderer>().material = mat;
+                }
+            }
+            else
+            {
+                if (background.transform.GetChild(i).TryGetComponent(out LightRays2D light))
+                {
+                    background.transform.GetChild(i).GetComponent<LightRays2D>().color1 = new Color32(248, 255, 26, 255);
+                    background.transform.GetChild(i).GetComponent<LightRays2D>().color2 = new Color32(255, 169, 0, 255);
+                }
             }
         }
 
