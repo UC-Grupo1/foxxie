@@ -266,25 +266,37 @@ public class Personagem : MonoBehaviour
             isDash = false;
             rb2D.velocity = Vector2.zero;
             isMundoE = false;
+
+            audioDim.clip = efeitos[2];
+            audioDim.Play();
         }
 
         if (col.gameObject.tag == "Moeda")
         {
             gc.moedas++;
             Destroy(col.gameObject);
+
+            audioDim.clip = efeitos[3];
+            audioDim.Play();
         }
 
         if (col.gameObject.tag == "Chave")
         {
             gc.pegouChave = true;
             Destroy(col.gameObject);
+            gc.txtChave.text = "1 / 1";
+
+            audioDim.clip = efeitos[4];
+            audioDim.Play();
         }
 
         if (col.gameObject.tag == "Portal")
         {
             if(gc.pegouChave)
             {
-                SceneManager.LoadScene("Fase_2");
+                gc.CalculaPontos();
+                GameController.view = false;
+                SceneManager.LoadScene(2);
             }
         }
 
