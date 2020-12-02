@@ -15,12 +15,13 @@ public class Highscores : MonoBehaviour
     public Text txtPontos;
     public GameObject panelNome, panelPontos, panelErro, primeiro, segundo, terceiro;
     public Button btnConfirm, btnAgain;
-
+    [SerializeField]
     private int pontos;
 
     private void Awake()
     {
         pontos = (int)GameController.pontos;
+        GetComponent<SavePreferences>().Apply();
     }
 
     private void Start()
@@ -32,7 +33,10 @@ public class Highscores : MonoBehaviour
         terceiro.SetActive(false);
         txtPontos.text = pontos.ToString();
 
-        if(GameController.view)
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        if (GameController.view)
         {
             btnAgain.gameObject.SetActive(false);
             panelNome.SetActive(false);
@@ -68,10 +72,7 @@ public class Highscores : MonoBehaviour
         }
         else
         {
-            panelErro.SetActive(true);
-            panelNome.SetActive(false);
-            panelPontos.SetActive(false);
-            print("Erro upload:" + www.error);
+            ConfigError(www.error);
         }
     }
 
@@ -129,10 +130,62 @@ public class Highscores : MonoBehaviour
         }
         else
         {
-            panelErro.SetActive(true);
-            panelNome.SetActive(false);
-            panelPontos.SetActive(false);
-            print("Erro download:" + www.error);
+            ConfigError(www.error);
+        }
+    }
+
+    public void DeletarRegistro(string username, int score)
+    {
+        StartCoroutine(DeletaRegidtro(username, score));
+    }
+
+    IEnumerator DeletaRegidtro(string username, int score)
+    {
+        WWW www = new WWW(webURL + publicCode + "/delete/" + username);
+        yield return www;
+
+        if (string.IsNullOrEmpty(www.error))
+        {
+            AddNewHighscores(username, score);
+        }
+        else
+        {
+            ConfigError(www.error);
+        }
+    }
+
+    public void ValidarNomeExistente(string username, int score)
+    {
+        StartCoroutine(ValidaNomeExistente(username, score));
+    }
+
+    IEnumerator ValidaNomeExistente(string username, int score)
+    {
+        WWW www = new WWW(webURL + publicCode + "/pipe-get/" + username);
+        yield return www;
+        
+        if(string.IsNullOrEmpty(www.error))
+        {
+            if(string.IsNullOrEmpty(www.text))
+            {
+                AddNewHighscores(username, score);
+            }
+            else
+            {
+                string[] registro = www.text.Split(new char[] { '|' }, System.StringSplitOptions.RemoveEmptyEntries);
+                if (int.Parse(registro[1]) < score)
+                {
+                    DeletarRegistro(username, score);
+                }
+                else
+                {
+                    AddNewHighscores(username, score);
+                }
+            }
+        }
+        else
+        {
+            ConfigError(www.error);
         }
     }
 
@@ -155,7 +208,7 @@ public class Highscores : MonoBehaviour
         panelNome.SetActive(false);
         panelPontos.SetActive(true);
 
-        AddNewHighscores(nome.text, (int)GameController.pontos);        
+        ValidarNomeExistente(nome.text, pontos);
     }
 
     public void BtnVoltar()
@@ -166,6 +219,14 @@ public class Highscores : MonoBehaviour
     public void BtnTentarNovamente()
     {
         SceneManager.LoadScene("Fase_1");
+    }
+
+    private void ConfigError(string erro)
+    {
+        panelErro.SetActive(true);
+        panelNome.SetActive(false);
+        panelPontos.SetActive(false);
+        print("Erro: " + erro);
     }
 }
 

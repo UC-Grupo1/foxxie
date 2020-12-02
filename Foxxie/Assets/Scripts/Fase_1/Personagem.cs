@@ -260,8 +260,6 @@ public class Personagem : MonoBehaviour
     {
         if(col.gameObject.tag == "DeathZone" && !isDeath)
         {
-            //rb2D.velocity = Vector2.zero;
-            //transform.position = gc.GetComponent<GameController>().initialPos.position;
             isDeath = true;
             isDash = false;
             rb2D.velocity = Vector2.zero;
@@ -269,6 +267,13 @@ public class Personagem : MonoBehaviour
 
             audioDim.clip = efeitos[2];
             audioDim.Play();
+
+            UnityEngine.Object[] objs = GameObject.FindObjectsOfType(typeof(PlatFall), true);
+            foreach (PlatFall obj in objs)
+            {
+                obj.tempoRespawn = 0;
+                obj.tempo = 0;
+            }
         }
 
         if (col.gameObject.tag == "Moeda")
@@ -296,6 +301,7 @@ public class Personagem : MonoBehaviour
             {
                 gc.CalculaPontos();
                 GameController.view = false;
+
                 SceneManager.LoadScene(2);
             }
         }

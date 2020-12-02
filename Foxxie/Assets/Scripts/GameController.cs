@@ -51,6 +51,7 @@ public class GameController : MonoBehaviour
         ValidaCheckpoint();
         AcendeFogo();
         SetaCinzaBackground();
+        Configuracoes();
     }
 
     private void Acoes()
@@ -59,11 +60,17 @@ public class GameController : MonoBehaviour
         {
             Time.timeScale = 0;
             menu.SetActive(true);
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
         else
         {
             Time.timeScale = 1;
             menu.SetActive(false);
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -166,5 +173,13 @@ public class GameController : MonoBehaviour
             }
         }
         print(pontos);
+    }
+
+    private void Configuracoes()
+    {
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("Fase_1");
+        }
     }
 }
