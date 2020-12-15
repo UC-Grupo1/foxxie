@@ -7,6 +7,8 @@ using Cinemachine;
 
 public class GameController : MonoBehaviour
 {
+    public static float pontos;
+    public static bool view;
 
     public GameObject mundoN, mundoE, menu, fogo, background;
     public Image cooldownDash, cooldownDim;
@@ -14,14 +16,13 @@ public class GameController : MonoBehaviour
     public Animator animatorTrocaDim;
     public Transform initialPos, tCheckpoint;
     public int moedas;
-    public Text txtMoedas, txtTempo;
+    public Text txtMoedas, txtTempo, txtChave;
     public bool pegouChave, checkpoint;
     public CinemachineVirtualCamera cam;
 
     bool inMenu;
     private float timer;
 
-    // Start is called before the first frame update
     void Start()
     {
         mundoN.SetActive(true);
@@ -36,12 +37,12 @@ public class GameController : MonoBehaviour
         moedas = 0;
         txtMoedas.text = "0 / 26";
         txtTempo.text = "0";
+        txtChave.text = "0 / 1";
 
         timer = 0f;
         checkpoint = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Acoes();
@@ -50,6 +51,7 @@ public class GameController : MonoBehaviour
         ValidaCheckpoint();
         AcendeFogo();
         SetaCinzaBackground();
+        Configuracoes();
     }
 
     private void Acoes()
@@ -58,11 +60,17 @@ public class GameController : MonoBehaviour
         {
             Time.timeScale = 0;
             menu.SetActive(true);
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
         else
         {
             Time.timeScale = 1;
             menu.SetActive(false);
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -89,6 +97,7 @@ public class GameController : MonoBehaviour
     private void ContaTempoFase()
     {
         timer += Time.deltaTime;
+        //CalculaPontos(timer);
         float minutes = Mathf.FloorToInt(timer / 60);
         float seconds = Mathf.FloorToInt(timer % 60);
 
@@ -150,6 +159,27 @@ public class GameController : MonoBehaviour
             {
                 continue;
             }
+        }
+    }
+
+    public void CalculaPontos()
+    {
+        if(pontos >= 0)
+        {
+            pontos = (moedas * 10) / Mathf.FloorToInt(timer % 60) + 100;
+            if(pontos < 0)
+            {
+                pontos = 0;
+            }
+        }
+        print(pontos);
+    }
+
+    private void Configuracoes()
+    {
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("Fase_1");
         }
     }
 }

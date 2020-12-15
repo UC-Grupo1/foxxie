@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlatFall : MonoBehaviour
 {
-    public float tempo, realTempoRespawn;
+    public float tempo, realTempoRespawn, tempoRespawn;
 
     private bool haveChildren;
-    private float tempoDestroi, tempoRespawn;
+    private float tempoDestroi;
     private Vector2 posIni;
 
     private void Start()

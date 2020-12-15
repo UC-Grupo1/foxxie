@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class gameController : MonoBehaviour
 {
@@ -37,5 +38,11 @@ public class gameController : MonoBehaviour
     public void Sair()
     {
         Application.Quit();
+    }
+
+    public void BtnRanking()
+    {
+        GameController.view = true;
+        SceneManager.LoadScene("Highscore");
     }
 }
